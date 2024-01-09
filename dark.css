@@ -1,0 +1,83 @@
+/*ダークモード*/
+body {
+    font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro', sans-serif;
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    background-color: rgb(44, 42, 42);
+    color: white;
+}
+
+#container {
+    flex:10;
+    display: flex;
+    flex-direction: column;
+}
+
+#output-container {
+    border-bottom: 2px solid #ccc; 
+}
+
+.output{
+    flex: 2;
+    font-size: 50px;
+    padding: 1% 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #ccc; 
+    position: relative;
+}
+
+#clear-button {
+    cursor: pointer;
+    font-size: 50px;
+    position: absolute;
+    right: 0; 
+    display: none;
+    margin:3%;
+}
+
+#other-container {
+    flex:1;
+    display: flex;
+    justify-content: flex-end; 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+}
+
+.other-contents , .yes-button, .no-button {
+    display:flex;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 50px;
+    border: 1px solid #ccc; 
+}
+
+.yes-button{
+    background-color: rgb(78, 40, 40);
+}
+
+.no-button{
+    background-color: rgb(36, 36, 73);
+}
+
+
+#hiragana-container {
+    flex: 8;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); 
+}
+
+.hiragana-char {
+    cursor: pointer;
+    font-size: 50px;
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    position: relative;
+}
+
+.hiragana-char.clicked {
+    background-color: rgb(150, 83, 10);
+}
